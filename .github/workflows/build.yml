@@ -40,7 +40,7 @@ jobs:
         with:
           repository: alminisl/GTodo
           ref: ${{ env.TAG }}
-          token: ${{ secrets.SOURCE_TOKEN }} # fine-grained PAT, Contents: read on alminisl/GTodo
+          ssh-key: ${{ secrets.SOURCE_SSH_KEY }} # read-only deploy key on alminisl/GTodo
 
       - name: Tag matches package.json version
         shell: bash
